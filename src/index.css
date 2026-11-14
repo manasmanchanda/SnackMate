@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream-100 text-ink-800 font-sans antialiased;
+    background-image:
+      radial-gradient(circle at 10% 0%, rgba(213, 245, 230, 0.6), transparent 40%),
+      radial-gradient(circle at 90% 10%, rgba(255, 228, 204, 0.55), transparent 35%);
+    background-attachment: fixed;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display text-ink-900;
+    line-height: 1.2;
+  }
+
+  p,
+  li {
+    line-height: 1.5;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-mint-700 px-5 py-2.5 font-bold text-white shadow-soft transition duration-200 hover:-translate-y-0.5 hover:bg-mint-800 hover:shadow-lift focus:outline-none focus-visible:ring-4 focus-visible:ring-mint-200 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-mint-200 bg-white px-5 py-2.5 font-bold text-mint-800 transition duration-200 hover:-translate-y-0.5 hover:border-mint-500 hover:bg-mint-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-mint-200 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-red-200 bg-white px-4 py-2 font-bold text-red-700 transition duration-200 hover:bg-red-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-red-100 disabled:opacity-60;
+  }
+
+  .card {
+    @apply rounded-3xl border border-white bg-white/90 shadow-soft;
+  }
+
+  .input {
+    @apply w-full rounded-2xl border border-cream-200 bg-white px-4 py-2.5 text-ink-900 placeholder:text-ink-700/60 transition focus:border-mint-500 focus:outline-none focus:ring-4 focus:ring-mint-100;
+  }
+
+  .label {
+    @apply mb-1.5 block text-sm font-bold text-ink-800;
+  }
+}
